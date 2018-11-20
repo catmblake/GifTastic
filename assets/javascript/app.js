@@ -16,6 +16,7 @@ $(document).ready(function () {
         var character = $("#tv-character-input").val().trim();
         topics.push(character);
         createButtons();
+        $("#tv-character-input").val(null);
     })
     createButtons();
 
