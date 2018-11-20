@@ -19,4 +19,9 @@ $(document).ready(function () {
     })
     createButtons();
 
+    $("button").on("click", function(){
+        var characterName = $(this).attr("data-name");
+        console.log(characterName);
+    })
+
 });
