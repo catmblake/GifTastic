@@ -23,28 +23,41 @@ $(document).ready(function () {
     $(document).on("click", ".tv-character", function () {
         var characterName = $(this).attr("data-name");
         console.log(characterName);
-
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + characterName + "&api_key=qSK7Kp3pe5UZ1uDgn5hFJyuDDLySKOYm&limit=10";
 
-        $.ajax ({
+        $.ajax({
             url: queryURL,
             method: "GET"
         })
-        .then(function(response) {
-            console.log(queryURL);
-            console.log(response);
+            .then(function (response) {
+                console.log(queryURL);
+                console.log(response);
+                var results = response.data;
 
-            var results = response.data;
-            
-            for (var j = 0; j < results.length; j++) {
-                var gifDiv = $("<div>");
-                var p = $("<p>").html("Rating: " + results[j].rating);
-                var characterImage = $("<img>");
-                characterImage.attr("src", results[j].images.fixed_height.url);
-                gifDiv.append(p);
-                gifDiv.append(characterImage);
-                $("#gif-div").prepend(gifDiv);
-            }
-        })
+                for (var j = 0; j < results.length; j++) {
+                    var gifDiv = $("<div>");
+                    gifDiv.attr("class", "col-md-4")
+                    var p = $("<p>").html("Rating: " + results[j].rating);
+                    var characterImage = $("<img>");
+                    characterImage.attr("src", results[j].images.fixed_height_still.url);
+                    characterImage.attr("data-still", results[j].images.fixed_height_still.url);
+                    characterImage.attr("data-animate", results[j].images.fixed_height.url);
+                    characterImage.attr("data-status", "still")
+                    characterImage.attr("class", "gif")
+                    gifDiv.append(p);
+                    gifDiv.append(characterImage);
+                    $("#gif-div").prepend(gifDiv);
+                }
+            })
+    })
+    $(document).on("click", ".gif", function () {
+        var status = $(this).attr("data-status")
+        if (status === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-status", "animate");
+        } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-status", "still");
+        }
     })
 });
