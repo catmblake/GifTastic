@@ -5,9 +5,11 @@ $(document).ready(function () {
         $("#button-div").empty();
         for (var i = 0; i < topics.length; i++) {
             var btn = $("<button>");
+            btn.attr("type", "button")
+            btn.addClass("btn btn-outline-primary");
             btn.addClass("tv-character");
             btn.attr("data-name", topics[i]);
-            btn.html("<h4>" + topics[i] + "</h4>");
+            btn.html(topics[i]);
             $("#button-div").append(btn);
         }
     }
@@ -15,8 +17,12 @@ $(document).ready(function () {
         event.preventDefault();
         var character = $("#tv-character-input").val().trim();
         topics.push(character);
+        // if ($("tv-character-input").val(null)) {
+        //     return;
+        // } else {
         createButtons();
         $("#tv-character-input").val(null);
+    // }
     })
     createButtons();
 

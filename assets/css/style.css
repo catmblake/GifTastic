@@ -1,0 +1,31 @@
+body {
+   background:  rgb(190, 232, 245);
+}
+.container {
+    background: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+#button-div {
+    padding: 20px;
+}
+button {
+    margin: 5px;
+}
+#add-tv-character {
+    margin-top:5px;
+}
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: white;
+    border: 1px solid #007bff;
+}
+#tv-character-input {
+    border: 1px solid #007bff;
+    max-width: 100%;
+}
+img {
+    max-width: 90%;
+}
