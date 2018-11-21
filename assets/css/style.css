@@ -6,10 +6,10 @@ body {
     margin-top: 20px;
     padding-bottom: 20px;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #17a2b8;;
 }
 #top-row {
-    background: #007bff;
+    background: #17a2b8;;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -26,10 +26,10 @@ button {
     margin-top: 20px;
     margin-bottom: 20px;
     background: white;
-    border: 1px solid #007bff;
+    border: 1px solid #17a2b8;;
 }
 #tv-character-input {
-    border: 1px solid #007bff;
+    border: 1px solid #17a2b8;;
     max-width: 100%;
 }
 p {

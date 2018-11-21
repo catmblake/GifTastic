@@ -16,13 +16,11 @@ $(document).ready(function () {
     $("#add-tv-character").on("click", function (event) {
         event.preventDefault();
         var character = $("#tv-character-input").val().trim();
+        if (character) {
         topics.push(character);
-        // if ($("tv-character-input").val(null)) {
-        //     return;
-        // } else {
         createButtons();
         $("#tv-character-input").val(null);
-    // }
+    }
     })
     createButtons();
 
