@@ -29,7 +29,7 @@ $(document).ready(function () {
     $(document).on("click", ".tv-character", function () {
         var characterName = $(this).attr("data-name");
         console.log(characterName);
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + characterName + "&api_key=qSK7Kp3pe5UZ1uDgn5hFJyuDDLySKOYm&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + characterName + "&api_key=qSK7Kp3pe5UZ1uDgn5hFJyuDDLySKOYm&limit=10";
 
         $.ajax({
             url: queryURL,
