@@ -6,7 +6,7 @@ $(document).ready(function () {
         for (var i = 0; i < topics.length; i++) {
             var btn = $("<button>");
             btn.attr("type", "button")
-            btn.addClass("btn btn-outline-primary");
+            btn.addClass("btn btn-light");
             btn.addClass("tv-character");
             btn.attr("data-name", topics[i]);
             btn.html(topics[i]);

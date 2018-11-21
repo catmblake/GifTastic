@@ -1,11 +1,17 @@
 body {
-   background:  rgb(190, 232, 245);
+   background:  whitesmoke;
 }
 .container {
     background: rgb(255, 255, 255);
     margin-top: 20px;
     padding-bottom: 20px;
     border-radius: 5px;
+    border: 1px solid #007bff;
+}
+#top-row {
+    background: #007bff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 #button-div {
     padding: 20px;
@@ -25,6 +31,10 @@ button {
 #tv-character-input {
     border: 1px solid #007bff;
     max-width: 100%;
+}
+p {
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 img {
     max-width: 90%;
