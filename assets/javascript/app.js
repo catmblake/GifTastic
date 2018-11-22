@@ -26,7 +26,6 @@ $(document).ready(function () {
 
     $(document).on("click", ".tv-character", function () {
         var characterName = $(this).attr("data-name");
-        console.log(characterName);
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + characterName + "&api_key=qSK7Kp3pe5UZ1uDgn5hFJyuDDLySKOYm&limit=10";
 
         $.ajax({
@@ -34,8 +33,6 @@ $(document).ready(function () {
             method: "GET"
         })
             .then(function (response) {
-                console.log(queryURL);
-                console.log(response);
                 var results = response.data;
 
                 for (var j = 0; j < results.length; j++) {
