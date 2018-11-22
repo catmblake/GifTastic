@@ -41,15 +41,16 @@ $(document).ready(function () {
                 for (var j = 0; j < results.length; j++) {
                     var gifDiv = $("<div>");
                     gifDiv.attr("class", "col-md-4")
-                    var p = $("<p>").html("Rating: " + results[j].rating);
+                    var p1 = $("<p>").html("<b>Title:</b> " + results[j].title);
+                    var p2 = $("<p>").html("<b>Rating:</b> " + results[j].rating);
                     var characterImage = $("<img>");
                     characterImage.attr("src", results[j].images.fixed_height_still.url);
                     characterImage.attr("data-still", results[j].images.fixed_height_still.url);
                     characterImage.attr("data-animate", results[j].images.fixed_height.url);
-                    characterImage.attr("data-status", "still")
-                    characterImage.attr("class", "gif")
-                    gifDiv.append(p);
+                    characterImage.attr("data-status", "still");
+                    characterImage.attr("class", "gif");
                     gifDiv.append(characterImage);
+                    gifDiv.append(p1, p2);
                     $("#gif-div").prepend(gifDiv);
                 }
             })

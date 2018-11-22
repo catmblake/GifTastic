@@ -33,9 +33,10 @@ button {
     max-width: 100%;
 }
 p {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 img {
     max-width: 90%;
+    margin-top: 20px;
 }
